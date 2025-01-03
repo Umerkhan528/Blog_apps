@@ -6,14 +6,13 @@ import { useRouter } from 'expo-router'
 const Register = () => {
     const route = useRouter();
     const onRegister=()=>{
-        route.navigate("/Index")
+        route.navigate("/main")
     }
   return (
     <View style={{ flex: 1, backgroundColor: 'grey', justifyContent: 'center', alignItems: 'center' }}>
-            <Image source={require("@/assets/images/react-logo@2x.png")} style={{ height: 70, width: 70, paddingVertical: 30, paddingHorizontal: 20 }} />
-            <TextInput placeholder='Enter your Email' style={{ padding: 20, borderWidth: 2, borderRadius: 5, }} />
-            <TextInput placeholder='Enter your Email' style={{ padding: 20, borderWidth: 2, borderRadius: 5, }} />
-            <MyButton title={"Register"} onPress={()=>onRegister}/>
+      <TextInput placeholder='Enter your Email' style={{ margin: 10,padding:20 , borderWidth: 2, borderRadius: 5, height: 40, width:120 }} />
+      <TextInput placeholder='Enter your Email' style={{ margin: 10,padding:20, borderWidth: 2, borderRadius: 5, height: 40, width:120  }} />
+            <MyButton title={"Register"} onPress={onRegister}/>
         </View>
   )
 }
